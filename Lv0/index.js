@@ -1,17 +1,10 @@
 // 문제 :
 // 제한사항 :
 
-function solution(price) {
-  var answer = 0;
-  answer =
-    price >= 500000
-      ? price * 0.8
-      : price >= 300000
-      ? price * 0.9
-      : price >= 100000
-      ? price * 0.95
-      : price;
-  return Math.floor(answer);
+function solution(my_string, n) {
+  var answer = [...my_string].map((e) => e.repeat(n)).join("");
+  console.log(answer);
+  return answer;
 }
 
-solution(150000);
+solution("hello", 3);
